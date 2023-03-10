@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.js"></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/p5.serialserver@0.0.28/lib/p5.serialport.js"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="sketch.js"></script>
+    <title>Project Arduino - Eliott & Paul</title>
+    <style>
+      body {
+        margin: 0;
+        color: #ffffff;
+        background-color: #3c3c3c;
+      }
+
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+      }
+
+
+      /* Switch slider */
+      .switch {
+          position: relative;
+          display: flex;
+          margin-left: 7%;
+          margin-bottom: 15px;
+          margin-top: 10px;
+          width: 85%;
+          height: 28px;
+      }
+
+      /* Hide default HTML checkbox */
+      .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+      }
+
+      /* The slider */
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: var(--bg-color);
+          -webkit-transition: .4s;
+          transition: .4s;
+      }
+
+      .slider:before {
+          position: absolute;
+          content: "";
+          height: 20px;
+          width: 50%;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+      }
+
+      input:checked + .slider {
+          background-color: #589073;
+      }
+
+      input:focus + .slider {
+          box-shadow: 0 0 1px #90C8AC;
+      }
+
+      input:checked + .slider:before {
+          -webkit-transform: translateX(94%);
+          -ms-transform: translateX(94%);
+          transform: translateX(94%);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+          border-radius: 16px;
+      }
+
+      .slider.round:before {
+          border-radius: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <label class="switch">
+      <input id="songCheckBox" type="checkbox">
+      <span class="slider round"></span>
+    </label>
+
+    <h1 id="speed">.</h1>
+  </body>
+</head>
