@@ -1,4 +1,4 @@
-# ArduinoHatBeat
+# HatBeat - Arduino
 
 Dans le cadre du cours à option Internet of Things, nous avons eu l'occasion de découvrir Arduino.
 
